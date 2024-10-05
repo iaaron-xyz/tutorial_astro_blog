@@ -1,4 +1,5 @@
 ---
+import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
 
 const pageTitle = "About Me!";
@@ -44,9 +45,7 @@ const skillFontFamily = '"Courier New", Courier, monospace';
   <body>
     <h1>{pageTitle}</h1>
     <div>
-      <a href="/">Home</a>
-      <span>About</span>
-      <a href="/blog">Blogs</a>
+      <Navigation />
     </div>
     <div>
       <p>Hi! my name is {myInfo.name}. I am living in {myInfo.country}.</p>

@@ -14,6 +14,10 @@ const myInfo = {
   skills: ["HTML", "CSS", "JavaScript", "Astro", "React", "Python", "Julia"],
   hobbies: ["Run", "Play", "Meet with friends"],
 };
+
+// CSS value variables
+const skillColor = "navy";
+const skillFontFamily = '"Courier New", Courier, monospace';
 ---
 
 <html lang="en">
@@ -23,14 +27,15 @@ const myInfo = {
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <style>
+    <style define:vars={{ skillColor, skillFontFamily }}>
       h1 {
         color: teal;
         font-size: 4rem;
       }
       .skill {
-        font-family: "Courier New", Courier, monospace;
+        font-family: var(--skillFontFamily);
         font-weight: bold;
+        color: var(--skillColor);
       }
     </style>
   </head>

@@ -1,19 +1,5 @@
 ---
 const pagetitle = "Homepage";
-
-const myInfo = {
-  name: "Aaron Park",
-  country: "South Korea",
-  occupation: "Scientist",
-  ProfessionalInterest: [
-    "Data science",
-    "Scientific visualization",
-    "Game art development",
-    "UI developer",
-  ],
-  skills: ["HTML", "CSS", "JavaScript", "Astro", "React", "Python", "Julia"],
-  hobbies: ["Run", "Play", "Meet with friends"],
-};
 ---
 
 <html lang="en">
@@ -30,26 +16,6 @@ const myInfo = {
       <span>Home</span>
       <a href="/about">About</a>
       <a href="/blog">Blogs</a>
-    </div>
-    <div>
-      <p>Hi! my name is {myInfo.name}. I am living in {myInfo.country}.</p>
-      <p>My professional interest are:</p>
-      <ul>
-        {myInfo.ProfessionalInterest.map((interest) => <li>{interest}</li>)}
-      </ul>
-      <p>My skills:</p>
-      <ul>
-        {myInfo.skills.map((skill) => <li>{skill}</li>)}
-      </ul>
-    </div>
-    <div>
-      {
-        myInfo.hobbies.length > 5 ? (
-          <p>I have quite a lot hobbies.</p>
-        ) : (
-          <p>I have only {myInfo.hobbies.length} hobbies.</p>
-        )
-      }
     </div>
   </body>
 </html>

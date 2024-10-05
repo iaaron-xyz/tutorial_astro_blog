@@ -1,5 +1,19 @@
 ---
 const pageTitle = "About Me!";
+
+const myInfo = {
+  name: "Aaron Park",
+  country: "South Korea",
+  occupation: "Scientist",
+  ProfessionalInterest: [
+    "Data science",
+    "Scientific visualization",
+    "Game art development",
+    "UI developer",
+  ],
+  skills: ["HTML", "CSS", "JavaScript", "Astro", "React", "Python", "Julia"],
+  hobbies: ["Run", "Play", "Meet with friends"],
+};
 ---
 
 <html lang="en">
@@ -9,6 +23,16 @@ const pageTitle = "About Me!";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <style>
+      h1 {
+        color: teal;
+        font-size: 4rem;
+      }
+      .skill {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <h1>{pageTitle}</h1>
@@ -17,9 +41,25 @@ const pageTitle = "About Me!";
       <span>About</span>
       <a href="/blog">Blogs</a>
     </div>
-    <p>
-      This is a blog build with a framework called astro. The main purpose of
-      this site is to learn an understand how the framework works.
-    </p>
+    <div>
+      <p>Hi! my name is {myInfo.name}. I am living in {myInfo.country}.</p>
+      <p>My professional interest are:</p>
+      <ul>
+        {myInfo.ProfessionalInterest.map((interest) => <li>{interest}</li>)}
+      </ul>
+      <p>My skills:</p>
+      <ul>
+        {myInfo.skills.map((skill) => <li class="skill">{skill}</li>)}
+      </ul>
+    </div>
+    <div>
+      {
+        myInfo.hobbies.length > 5 ? (
+          <p>I have quite a lot hobbies.</p>
+        ) : (
+          <p>I have only {myInfo.hobbies.length} hobbies.</p>
+        )
+      }
+    </div>
   </body>
 </html>

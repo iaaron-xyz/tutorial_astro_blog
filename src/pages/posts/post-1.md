@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Steps followed in my first Astro project'
 pubDate: 2022-07-01
 description: 'This is the first post of my new blog created with the Astro framework.'
@@ -8,13 +9,6 @@ image:
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-# Steps followed in my first Astro project
-
-- Published on: 2022-07-01 | Updated on: 2024-09-28
-
-- [Home](/)
-
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
 ## What I've accomplished
 

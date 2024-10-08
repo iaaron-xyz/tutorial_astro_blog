@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Why do we use Lorem Ipsum
+title: Why do we use Lorem Ipsum?
 author: Astro Learner
 description: "Why is everyone uses Lorem Ipsum?"
 image:
